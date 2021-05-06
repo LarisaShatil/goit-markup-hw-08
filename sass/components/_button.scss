@@ -1,0 +1,21 @@
+.button {
+  width: 12.5em;
+  height: 3.12em;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--white-color);
+  cursor: pointer;
+
+  transition: background-color var(--animation), box-shadow var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-hover);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}

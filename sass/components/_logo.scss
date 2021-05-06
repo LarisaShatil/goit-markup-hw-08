@@ -1,0 +1,21 @@
+.logo {
+  color: var(--accent-color);
+  font-family: var(Raleway, sans-serif);
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  vertical-align: middle;
+}
+.logo--dark {
+  color: #000000;
+  border-bottom: none;
+}
+.logo--light {
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header .logo {
+    margin-right: 85px;
+  }
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap');
+
+:root {
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --dark-bg-color: #2f303a;
+  --accent-color: #2196f3;
+  --white-color: #ffffff;
+  --button-hover: #188ce8;
+  --section-bg-color: #f5f4fa;
+  --card-border-color: #eeeeee;
+  --header-bottom-border: #ececec;
+  --primary-icons-color: #afb1b8;
+  --emergency-bgc: #c4c4c4;
+
+  --main-font-family: Roboto, sans-serif;
+  --logo-font-family: Raleway, sans-serif;
+
+  --animation: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --grid-item: 1;
+  --grid-item-gap: 30px;
+}

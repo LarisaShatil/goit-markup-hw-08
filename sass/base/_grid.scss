@@ -1,0 +1,39 @@
+// .grid {
+//   margin-left: -15px;
+//   margin-right: -15px;
+// }
+
+.grid-item {
+  margin-bottom: 30px;
+  border: 1px solid salmon;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 1px solid salmon;
+
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .grid-item {
+    flex-basis: calc((100% - var(--grid-item-gap) * var(--grid-item)) / var(--grid-item));
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .grid-item {
+    --grid-item: 2;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .grid-item {
+    --grid-item: 4;
+  }
+}

@@ -1,0 +1,109 @@
+.gallery__link:hover,
+.gallery__link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+
+  // --grid-item: 1;
+
+  // margin-top: 30px;
+
+  // &:nth-child(3n) {
+  //   margin-right: 0;
+  // }
+  // &:nth-child(-n + 3) {
+  //   margin-top: 0;
+  // }
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.gallery__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+
+  margin-bottom: 4px;
+}
+
+.gallery__box {
+  position: relative;
+  z-index: 3;
+  padding: 20px 24px;
+  background-color: var(--white-color);
+  border-bottom: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+}
+.gallery__link .gallery__textbox {
+  transition: transform var(--animation), opacity var(--animation), box-shadow var(--animation);
+}
+
+.gallery__link:hover .gallery__textbox {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+.gallery__textbox {
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
+
+  width: 100%;
+  max-width: 370px;
+  min-height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(+100%);
+  opacity: 0;
+}
+.textbox__description {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+
+  color: var(--white-color);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .gallery__box:first-of-type {
+    min-height: 143px;
+  }
+  .gallery__item:last-of-type {
+    margin-left: 15px;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+  .gallery__item {
+    --grid-item: 2;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    --grid-item: 3;
+    position: relative;
+    overflow: hidden;
+
+    margin-top: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:nth-child(-n + 3) {
+      margin-top: 0;
+    }
+  }
+}

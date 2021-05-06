@@ -1,0 +1,26 @@
+.header {
+  border-bottom: 1px solid var(--header-bottom-border);
+  @media screen and (min-width: 1200px) {
+    & .logo {
+      margin-right: 93px;
+      padding: 0;
+    }
+  }
+  // & .logo {
+  //   margin-right: 93px;
+  //   padding: 0;
+  // }
+}
+
+.header__container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen {
+  .header__container {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
