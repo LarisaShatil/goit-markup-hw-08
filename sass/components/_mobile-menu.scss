@@ -1,23 +1,58 @@
 .mobile-menu-btn {
+  // position: relative;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  z-index: 110;
   background-color: transparent;
   border: none;
 
-  width: 40px;
-  height: 40px;
+  transition: fill var(--animation);
+
+  @media screen and (min-width: 767px) {
+    display: none;
+  }
+}
+
+.icon-close {
+  display: none;
+}
+
+.is-open {
+  .icon-close {
+    display: block;
+  }
+  .icon-menu {
+    display: none;
+  }
 }
 
 .mobile-menu-icon {
-  width: 40px;
-  height: 40px;
+  cursor: pointer;
+  fill: var(--primary-text-color);
+  // z-index: 200;
+
+  transition: fill 250ms var(--animation);
+
+  &:hover,
+  &:focus {
+    fill: var (--accent-color);
+  }
 }
 
-.mobile-menu__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+.mobile-menu-btn:hover .mobile-menu-icon,
+.mobile-menu-btn:focus .mobile-menu-icon {
+  fill: var (--accent-color);
 }
+
+// .mobile-menu__overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+// }
 
 .mobile-menu {
   position: fixed;
@@ -27,19 +62,69 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 110;
+  z-index: 105;
   padding: 48px 40px;
 
   background-color: var(--white-color);
 
   transition: right var(--animation);
 
-  & .is-open {
+  &.is-open {
     right: 0;
   }
 }
+.menu-navigation {
+  display: block;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
 
-@media screen and (min-width: 678px) {
+  margin-bottom: 300px;
+
+  color: var(--secondary-text-color);
+}
+
+.menu__item + .menu__item {
+  margin-top: 32px;
+}
+
+.menu-contacts {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
+
+  padding-bottom: 64px;
+}
+
+.menu-contacts__item:first-of-type {
+  font-size: 40px;
+  margin-bottom: 32px;
+}
+.menu-social-box {
+  display: block;
+}
+.menu-social {
+  display: flex;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  color: var(--accent-color);
+}
+
+.menu-social__item {
+  box-sizing: border-box;
+}
+.menu-social__item:not(:last-child):after {
+  content: '';
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  transform: rotate(90deg);
+}
+
+@media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
   }

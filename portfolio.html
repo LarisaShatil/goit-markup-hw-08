@@ -14,16 +14,17 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
+    <!-- The header -->
     <header class="header">
       <div class="container header__container">
-        <nav class="list navigation">
-          <a class="link logo" lang="en" href="./index.html">Web<span class="logo--dark">Studio</span></a>
+        <a class="link logo" lang="en" href="./index.html">Web<span class="logo--dark">Studio</span></a>
+        <nav class="list navigation-section">
           <ul class="list navigation">
             <li class="item navigation__item">
               <a class="link navigation__link" href="./index.html">Студия</a>
             </li>
             <li class="item navigation__item">
-              <a class="link current-link navigation__link" href="./portfolio.html">Портфолио</a>
+              <a class="link navigation__link current-link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="item navigation__item"><a class="link navigation__link line" href="">Контакты</a></li>
           </ul>
@@ -47,7 +48,53 @@
           </li>
         </ul>
       </div>
+      <!-- Menu button -->
+      <button type="button" class="mobile-menu-btn" aria-expanded="false" aria-controls="mobile-menu" data-menu-button>
+        <svg width="40" height="40" class="mobile-menu-icon" is-open>
+          <use class="icon-menu" href="./images/icons.svg#icon-menu"></use>
+          <use class="icon-close" href="./images/icons.svg#icon-close"></use>
+        </svg>
+        <!-- <svg class="mobile-menu-icon">
+          <use href="./images/icons.svg#icon-x"></use>
+        </svg> -->
+      </button>
     </header>
+    <!-- Mobile burger menu -->
+    <div class="mobile-menu" id="mobile-menu" data-menu>
+      <nav class="menu-section">
+        <ul class="list menu-navigation">
+          <li class="item menu__item">
+            <a class="link menu__link" href="./index.html">Студия</a>
+          </li>
+          <li class="item menu__item">
+            <a class="link menu__link current-link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="item menu__item"><a class="link menu__link" href="">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="list menu-contacts">
+        <li class="item menu-contacts__item">
+          <a class="link menu-contacts__link current-link" href="tel:+380961111111"> +38 096 111 11 11</a>
+        </li>
+        <li class="item menu-contacts__item">
+          <a class="link menu-contacts__link" href="mailto:info@devstudio.com"> info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="list menu-social" lang="en">
+        <li class="menu-social__item">
+          <a href="" class="link menu-social__link" target="_blank" rel="noopener noreferrer"> Instagram </a>
+        </li>
+        <li class="menu-social__item">
+          <a href="" class="link menu-social__link" target="_blank" rel="noopener noreferrer"> Twitter </a>
+        </li>
+        <li class="menu-social__item">
+          <a href="" class="link menu-social__link" target="_blank" rel="noopener noreferrer">Facebook </a>
+        </li>
+        <li class="menu-social__item">
+          <a href="" class="link menu-social__link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
     <main>
       <!-- Section with portfolio buttons -->
       <section class="portfolio-section">
@@ -75,7 +122,21 @@
           <ul class="list gallery grid">
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img1.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img1_desktop.jpg 1x, ./images/desktop/img1@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img1_tablet.jpg 1x, ./images/tablet/img1@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img1_mobile.jpg 1x, ./images/mobile/img1@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img1.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__box">
                   <h2 class="gallery__title">Технокряк</h2>
                   <p>Веб-сайт</p>
@@ -89,8 +150,23 @@
               </a>
             </li>
             <li class="item gallery__item grid-item">
-              <a class="link gallery__link" href=""
-                ><img src="./images/portfolio/img2.jpg" alt="" width="370" height="295" />
+              <a class="link gallery__link" href="">
+                <picture>
+                  <source
+                    srcset="./images/desktop/img2_desktop.jpg 1x, ./images/desktop/img2@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img2_tablet.jpg 1x, ./images/tablet/img2@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img2_mobile.jpg 1x, ./images/mobile/img2@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img2.jpg" alt="" width="370" height="295" />
+                </picture>
+
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -105,7 +181,22 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img3.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img3_desktop.jpg 1x, ./images/desktop/img3@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img3_tablet.jpg 1x, ./images/tablet/img3@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img3_mobile.jpg 1x, ./images/mobile/img3@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img3.jpg" alt="" width="370" height="295" />
+                </picture>
+
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -120,7 +211,21 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img4.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img4_desktop.jpg 1x, ./images/desktop/img4@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img4_tablet.jpg 1x, ./images/tablet/img4@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img4_mobile.jpg 1x, ./images/mobile/img4@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img4.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -135,7 +240,21 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img5.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img5_desktop.jpg 1x, ./images/desktop/img5@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img5_tablet.jpg 1x, ./images/tablet/img5@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img5_mobile.jpg 1x, ./images/mobile/img5@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img5.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -150,7 +269,21 @@
             </li>
             <li class="item gallery__item grid-item">
               <a id="web-sites" class="link gallery__link" href="">
-                <img src="./images/portfolio/img6.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img6_desktop.jpg 1x, ./images/desktop/img6@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img6_tablet.jpg 1x, ./images/tablet/img6@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img6_mobile.jpg 1x, ./images/mobile/img6@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img6.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -165,7 +298,21 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img7.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img7_desktop.jpg 1x, ./images/desktop/img7@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img7_tablet.jpg 1x, ./images/tablet/img7@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img7_mobile.jpg 1x, ./images/mobile/img7@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img7.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -180,7 +327,21 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img8.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img8_desktop.jpg 1x, ./images/desktop/img8@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img8_tablet.jpg 1x, ./images/tablet/img8@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img8_mobile.jpg 1x, ./images/mobile/img8@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img8.jpg" alt="" width="370" height="295" />
+                </picture>
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -195,7 +356,22 @@
             </li>
             <li class="item gallery__item grid-item">
               <a class="link gallery__link" href="">
-                <img src="./images/portfolio/img9.jpg" alt="" width="370" height="295" />
+                <picture>
+                  <source
+                    srcset="./images/desktop/img9_desktop.jpg 1x, ./images/desktop/img9@2x_desktop.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="./images/tablet/img9_tablet.jpg 1x, ./images/tablet/img9@2x_tablet.jpg 2x"
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="./images/mobile/img9_mobile.jpg 1x, ./images/mobile/img9@2x_mobile.jpg 2x"
+                    media="(max-width:767px)"
+                  />
+                  <img src="./images/portfolio/img9.jpg" alt="" width="370" height="295" />
+                </picture>
+
                 <div class="gallery__textbox">
                   <p class="textbox__description">
                     Технокряк это современная площадка по разработке веб-сайтов. Компания использует современные
@@ -277,5 +453,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

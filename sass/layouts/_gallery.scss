@@ -57,7 +57,7 @@
   padding: 63px 24px;
 
   width: 100%;
-  max-width: 370px;
+  // max-width: 370px;
   min-height: 294px;
   background-color: rgba(33, 150, 243, 0.9);
   transform: translateY(+100%);
@@ -76,7 +76,7 @@
     min-height: 143px;
   }
   .gallery__item:last-of-type {
-    margin-left: 15px;
+    margin-left: 20px;
     margin-right: auto;
     margin-bottom: 0;
   }
