@@ -291,7 +291,6 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
-  outline: 1px solid tomato;
 }
 
 h1,
