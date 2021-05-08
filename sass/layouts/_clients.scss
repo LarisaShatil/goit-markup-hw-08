@@ -33,10 +33,14 @@
 .client__item {
   margin-bottom: 30px;
 }
-.client__item + .client__item {
-  margin-left: 30px;
+
+@media screen and (min-width: 480px) {
+  .client__item + .client__item {
+    margin-left: 30px;
+  }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .client__item:nth-child(2n + 1) {
     margin-left: 0;
   }

@@ -291,6 +291,7 @@ html {
 *::after,
 *::before {
   box-sizing: inherit;
+  outline: 1px solid tomato;
 }
 
 h1,
@@ -365,11 +366,16 @@ body {
 }
 
 .container {
-  width: 480px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -567,14 +573,22 @@ body {
   background-color: var(--dark-bg-color);
   border-radius: 4px;
   padding: 11px;
-  margin-right: 12px;
+  margin-left: auto;
+  margin-right: auto;
   outline: none;
   font-size: 16px;
   line-height: 1.16;
   letter-spacing: 0.01em;
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 479px) {
+  .subscribe__field {
+    width: 100%;
+    max-width: 358px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .subscribe__field {
     margin-bottom: 20px;
   }
@@ -582,7 +596,7 @@ body {
 
 .subscribe__button {
   padding: 10px;
-  text-align: center;
+  display: inline-flex;
   align-items: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
@@ -894,8 +908,14 @@ body {
   fill: var --accent-color;
 }
 
+.mobile-menu-btn .mobile-menu-icon:hover,
+.mobile-menu-btn .mobile-menu-icon:focus {
+  fill: var --accent-color;
+}
+
 .mobile-menu-btn:hover .mobile-menu-icon,
 .mobile-menu-btn:focus .mobile-menu-icon {
+  background-color: var --accent-color;
   fill: var --accent-color;
 }
 
@@ -1123,10 +1143,6 @@ body {
   }
 }
 
-.hero__container {
-  width: 480px;
-}
-
 .hero__title {
   margin: 0;
   color: var(--white-color);
@@ -1139,6 +1155,12 @@ body {
 
 .hero__button {
   margin-top: 30px;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__container {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1266,8 +1288,6 @@ body {
 }
 
 .team__item {
-  width: 450px;
-  height: 622px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -1350,11 +1370,13 @@ body {
   margin-bottom: 30px;
 }
 
-.client__item + .client__item {
-  margin-left: 30px;
+@media screen and (min-width: 480px) {
+  .client__item + .client__item {
+    margin-left: 30px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .client__item:nth-child(2n + 1) {
     margin-left: 0;
   }

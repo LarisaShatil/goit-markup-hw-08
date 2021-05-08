@@ -1,5 +1,4 @@
 .mobile-menu-btn {
-  // position: relative;
   position: absolute;
   top: 8px;
   right: 8px;
@@ -31,7 +30,6 @@
 .mobile-menu-icon {
   cursor: pointer;
   fill: var(--primary-text-color);
-  // z-index: 200;
 
   transition: fill 250ms var(--animation);
 
@@ -41,18 +39,16 @@
   }
 }
 
-.mobile-menu-btn:hover .mobile-menu-icon,
-.mobile-menu-btn:focus .mobile-menu-icon {
+.mobile-menu-btn .mobile-menu-icon:hover,
+.mobile-menu-btn .mobile-menu-icon:focus {
   fill: var (--accent-color);
 }
 
-// .mobile-menu__overlay {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-// }
+.mobile-menu-btn:hover .mobile-menu-icon,
+.mobile-menu-btn:focus .mobile-menu-icon {
+  background-color: var (--accent-color);
+  fill: var (--accent-color);
+}
 
 .mobile-menu {
   position: fixed;
