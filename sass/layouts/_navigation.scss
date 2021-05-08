@@ -47,8 +47,7 @@
   margin-right: 10px;
 }
 
-.navigation__item:not(:last-child),
-.contacts__item:not(:last-child) {
+.navigation__item:not(:last-child) {
   margin-right: 50px;
 }
 
@@ -84,5 +83,9 @@
   .navigation__link {
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+
+  .contacts__item:not(:last-child) {
+    margin-right: 50px;
   }
 }

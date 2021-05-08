@@ -1,14 +1,13 @@
 .subscribe-form {
   @media screen and (min-width: 1200px) {
     display: flex;
+    align-items: baseline;
+    justify-content: space-between;
   }
-
-  align-items: baseline;
-  justify-content: space-between;
 }
 
 .subscribe__field {
-  display: inline-block;
+  display: block;
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -29,8 +28,12 @@
     max-width: 358px;
   }
 
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 1199px) {
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 12px;
   }
 }
 
