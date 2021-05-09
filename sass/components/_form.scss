@@ -14,7 +14,6 @@
   letter-spacing: 0.03em;
   padding-left: 0.5em;
   margin-top: 20px;
-  margin-left: 1.6em;
   font-size: 14px;
   line-height: 1.171;
   color: var(--primary-text-color);
@@ -37,11 +36,9 @@
 }
 
 .agreed-span {
-  position: absolute;
+  display: inline-block;
+  margin-right: 7px;
   bottom: 0.2em;
-  left: 0;
-  margin-left: 0.4em;
-
   width: 1em;
   height: 1em;
   border: 1px solid var(--secondary-text-color);

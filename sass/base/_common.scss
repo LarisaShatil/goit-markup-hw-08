@@ -59,9 +59,7 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
-.navigation .current-link,
-.menu-navigation .current-link,
-.menu-contacts .current-link {
+.navigation .current-link {
   color: var(--accent-color);
 }
 .current-link::after {

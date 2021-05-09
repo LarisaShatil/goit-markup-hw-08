@@ -9,6 +9,11 @@
 
   transition: fill var(--animation);
 
+  &:hover,
+  &:focus {
+    fill: var (--accent-color);
+  }
+
   @media screen and (min-width: 767px) {
     display: none;
   }
@@ -32,51 +37,42 @@
   fill: var(--primary-text-color);
 
   transition: fill 250ms var(--animation);
-
-  &:hover,
-  &:focus {
-    fill: var (--accent-color);
-  }
-}
-
-.mobile-menu-btn .mobile-menu-icon:hover,
-.mobile-menu-btn .mobile-menu-icon:focus {
-  fill: var (--accent-color);
-}
-
-.mobile-menu-btn:hover .mobile-menu-icon,
-.mobile-menu-btn:focus .mobile-menu-icon {
-  background-color: var (--accent-color);
-  fill: var (--accent-color);
 }
 
 .mobile-menu {
   position: fixed;
   top: 0;
   right: -100%;
-  width: 100%;
-  height: 100vh;
+
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   z-index: 105;
-  padding: 48px 40px;
+  width: 100%;
+  max-width: 480px;
+  height: 100vh;
+  padding: 8% 6%;
+
+  overflow-y: scroll;
 
   background-color: var(--white-color);
-
   transition: right var(--animation);
 
   &.is-open {
     right: 0;
   }
+
+  @media screen and (min-width: 480px) {
+    padding: 48px 40px;
+  }
 }
+
 .menu-navigation {
   display: block;
   font-weight: 500;
   font-size: 40px;
   line-height: 1.17;
   letter-spacing: 0.02em;
-
-  margin-bottom: 300px;
 
   color: var(--secondary-text-color);
 }
@@ -90,11 +86,10 @@
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
-
-  padding-bottom: 64px;
 }
 
 .menu-contacts__item:first-of-type {
+  color: var(--accent-color);
   font-size: 40px;
   margin-bottom: 32px;
 }
@@ -118,6 +113,40 @@
   margin-left: 10px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   transform: rotate(90deg);
+}
+
+.menu__link,
+.menu-contacts__link {
+  transition: color var(--animation);
+}
+
+.menu__link:hover,
+.menu__link:focus,
+.menu-contacts__link:hover,
+.menu-contacts__link:focus {
+  color: var(--accent-color);
+}
+
+@media screen and (max-width: 425px) {
+  .menu-navigation {
+    font-size: 20px;
+  }
+
+  .menu-contacts {
+    font-size: 14px;
+  }
+
+  .menu-contacts__item:first-of-type {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .menu__item + .menu__item {
+    margin-top: 22px;
+  }
+  .menu-social {
+    font-size: 0.8em;
+  }
 }
 
 @media screen and (min-width: 768px) {
